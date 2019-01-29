@@ -45,7 +45,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="AI_CustomARPName" ComponentId="{CADBB748-3BBB-4DBC-B601-63B44F903B28}" Directory_="APPDIR" Attributes="260" KeyPath="DisplayName" Options="1"/>
-    <ROW Component="AI_ExePath" ComponentId="{1BBFB349-5AD2-4809-A963-C60BE7D0A9F8}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
+    <ROW Component="AI_ExePath" ComponentId="{DD9498CF-7ED6-463F-801D-AC7AB4C294FB}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
     <ROW Component="D" ComponentId="{8DD09162-164B-46D1-BE11-005EFAD9E6F4}" Directory_="APPDIR" Attributes="260" KeyPath="D" Options="1"/>
     <ROW Component="LMGRD_LOG_FILE" ComponentId="{B6DB19C7-69FC-4135-8502-DA64BB8513DC}" Directory_="APPDIR" Attributes="260" KeyPath="LMGRD_LOG_FILE"/>
     <ROW Component="License" ComponentId="{D57F7FC4-4A22-46D8-9863-32A6DB8DE4DE}" Directory_="APPDIR" Attributes="260" KeyPath="License"/>
@@ -77,9 +77,6 @@
     <ROW File="splm9.lic" Component_="install.log" FileName="splm9.lic" Attributes="0" SourcePath="NX License Servers\splm9.lic" SelfReg="false" NextFile="splm_ugslmd.log"/>
     <ROW File="splm_ugslmd.log" Component_="install.log" FileName="SPLM_U~1.LOG|splm_ugslmd.log" Attributes="0" SourcePath="NX License Servers\splm_ugslmd.log" SelfReg="false" NextFile="ugslmd.exe"/>
     <ROW File="ugslmd.exe" Component_="ugslmd.exe" FileName="ugslmd.exe" Attributes="0" SourcePath="NX License Servers\ugslmd.exe" SelfReg="false" DigSign="true"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.custcomp.MsiShortcutPropertyComponent">
-    <ROW MsiShortcutProperty="NXLicenseServers0" Shortcut_="NXLicenseServers" PropertyKey="System.AppUserModel.PreventPinning" PropVariantValue="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AiPersistentPropComponent">
     <ROW Property="D" Registry="D" HklmSearch="D" HkcuSearch="D_1" Hklm64Search="D_2" Hkcu64Search="D_3"/>
@@ -199,7 +196,7 @@
     <ROW Dialog_="InstallDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="900" MsiKey="InstallDlg#ProductLogo"/>
     <ROW Dialog_="InstallDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1000"/>
     <ROW Dialog_="InstallDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1100"/>
-    <ROW Dialog_="InstallDlg" Control="Description" Type="Text" X="17" Y="137" Width="312" Height="65" Attributes="65539" Text="本许可证源文件资源来自于网络。支持NX10-NX1847版本许可证服务共存，一键安装，方便简洁。安装前请关闭NX软件并卸载旧许可证服务文件" Order="1200"/>
+    <ROW Dialog_="InstallDlg" Control="Description" Type="Text" X="17" Y="137" Width="312" Height="65" Attributes="65539" Text="本许可证源文件资源来自于网络。支持NX10-NX1847版本许可证服务共存，一键安装，方便简洁。安装前请关闭NX软件并卸载旧许可证服务文件。" Order="1200"/>
     <ROW Dialog_="InstallDlg" Control="Text_3" Type="Text" X="17" Y="99" Width="312" Height="35" Attributes="196611" Text="一键安装NX许可证服务           NX10 - NX1847" TextStyle="[SubTitleStyle]" Order="1300"/>
     <ROW Dialog_="MaintenanceTypeDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="1400" MsiKey="MaintenanceTypeDlg#AdvInst"/>
     <ROW Dialog_="MaintenanceTypeDlg" Control="SubTitle" Type="Text" X="17" Y="105" Width="312" Height="20" Attributes="196611" Text="修改、修复或删除安装" TextStyle="[SubTitleStyle]" Order="1500" TextLocId="Control.Text.MaintenanceTypeDlg#Title" MsiKey="MaintenanceTypeDlg#SubTitle"/>
@@ -380,7 +377,6 @@
     <ROW Environment="SPLM_LICENSE_SERVER" Name="=-*SPLM_LICENSE_SERVER" Value="27800@127.0.0.1" Component_="Lmgrd"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
-    <ROW Name="SystemFoldermsiexec.exe" SourcePath="icon\Uninstall.ico" Index="0"/>
     <ROW Name="logo.exe" SourcePath="icon\logo.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
@@ -394,7 +390,6 @@
     <ROW Action="AI_PinShortcuts" Condition="(VersionNT &gt; 600) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="6499"/>
     <ROW Action="AI_UnpinShortcuts" Condition="(VersionNT &gt; 600) AND (REMOVE = &quot;ALL&quot;)" Sequence="3199"/>
     <ROW Action="AI_GetArpIconPath" Sequence="1401"/>
-    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
     <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
@@ -407,6 +402,7 @@
     <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
     <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
     <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
+    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="InstallDlg" Condition="AI_INSTALL" Sequence="1230" SeqType="3" MsiKey="WelcomeDlg"/>
@@ -471,9 +467,6 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiServInstComponent">
     <ROW ServiceInstall="lmgrd.exe" Name="Siemens PLM License Server" DisplayName="Siemens PLM License Server" ServiceType="16" StartType="2" ErrorControl="1" Component_="lmgrd.exe" Description="Siemens PLM License Server"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="NXLicenseServers" Directory_="NXLicenseServers_Dir" Name="卸载NXLI~1|卸载NX License Servers" Component_="install.log" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1" CustomFlags="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiTextStyleComponent">
     <ROW TextStyle="Manufacturer_Manufacturer" FaceName="Verdana" Size="10" Color="16777215" StyleBits="0"/>
