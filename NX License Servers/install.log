@@ -1,0 +1,640 @@
+__________________________________________________________________________
+
+周五 11月 17 10:01:44 CST 2017
+
+可用内存： 28767 KB
+内存总量： 47104 KB
+
+java.class.path:
+    C:\Users\YS\AppData\Local\Temp\I1510883262\InstallerData\IAClasses.zip
+    C:\Users\YS\AppData\Local\Temp\I1510883262\InstallerData\Execute.zip
+    C:\Users\YS\AppData\Local\Temp\I1510883262\Windows\InstallerData\Execute.zip
+    C:\Users\YS\AppData\Local\Temp\I1510883262\InstallerData\Resource1.zip
+    C:\Users\YS\AppData\Local\Temp\I1510883262\Windows\InstallerData\Resource1.zip
+    C:\Users\YS\AppData\Local\Temp\I1510883262\InstallerData
+    C:\Users\YS\AppData\Local\Temp\I1510883262\Windows\InstallerData
+
+ZGUtil.CLASS_PATH:
+    C:\Users\YS\AppData\Local\Temp\I1510883262\InstallerData\IAClasses.zip
+    C:\Users\YS\AppData\Local\Temp\I1510883262\InstallerData\Execute.zip
+    C:\Users\YS\AppData\Local\Temp\I1510883262\InstallerData
+
+sun.boot.class.path:
+    <none specified>
+
+java.ext.dirs:
+    <none specified>
+
+java.version                  == 9.0.1 (Java 1)
+java.vm.name                  == Java HotSpot(TM) 64-Bit Server VM
+java.vm.vendor                == Oracle Corporation
+java.vm.version               == 9.0.1+11
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Oracle Corporation
+java.vm.specification.version == 9
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Oracle Corporation
+java.specification.version    == 9
+java.vendor                   == Oracle Corporation
+java.vendor.url               == http://java.oracle.com/
+java.class.version            == 53.0
+java.library.path             == C:\ProgramData\Oracle\Java\javapath;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Autodesk Shared\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;.
+java.compiler                 == null
+java.home                     == C:\Program Files\Java\jre-9.0.1
+java.io.tmpdir                == C:\Users\YS\AppData\Local\Temp\
+os.name                       == Microsoft Windows 7 Ultimate 
+os.arch                       == amd64
+os.version                    == 6.1.7601
+path.separator                == ;
+file.separator                == \
+file.encoding                 == GBK
+user.name                     == YS
+user.home                     == C:\Users\YS
+user.dir                      == C:\Users\YS\AppData\Local\Temp\I1510883262\Windows
+user.language                 == zh
+user.region                   == null
+__________________________________________________________________________
+
+已安装的  Siemens PLM License Server 功能 应用程序
+
+安装开始： 2017年11月17日 CST 上午9:48:00
+安装结束： 2017年11月17日 CST 上午9:52:51
+
+由 Acresso 提供的 InstallAnywhere 18.0 Premier with Virtualization and Cloud Build 5431 安装
+
+
+用户交互项
+----------
+
+
+#选择安装文件夹
+#--------------
+USER_INSTALL_DIR=C:\\Program Files\\Siemens\\PLMLicenseServer
+
+#选择许可证文件
+#--------------
+USER_SELECTED_FILE=splm8.lic
+PATH_OF_SELECTED_FILE=D:\\SOFT\\UG_NX12.0正式版\\破解文件\\
+
+#安装
+#----
+-fileOverwrite_C\:\\Users\\YS\\AppData\\Local\\Temp\\346303.tmp\\installs32.exe=是
+-fileOverwrite_C\:\\Users\\YS\\AppData\\Local\\Temp\\346303.tmp\\installs64.exe=是
+-fileOverwrite_C\:\\Users\\YS\\AppData\\Local\\Temp\\346303.tmp\\modreg32.exe=是
+-fileOverwrite_C\:\\Users\\YS\\AppData\\Local\\Temp\\346303.tmp\\modreg64.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\UninstallerData\\Uninstall.lax=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\UninstallerData\\resource\\iawin64_x64.dll=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\UninstallerData\\resource\\iawin32.dll=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\UninstallerData\\resource\\win64_32_x64.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\UninstallerData\\resource\\remove.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\UninstallerData\\resource\\invoker.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\getcid.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\ugslmd.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\lmgrd.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\lmutil.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\lmtools.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\installs.exe=是
+-fileOverwrite_C\:\\Program\ Files\\Siemens\\PLMLicenseServer\\HardwareKey\\Sentinel\ System\ Driver\ Installer\ 7.5.7.exe=是
+
+摘要
+----
+
+安装： 成功.
+
+96 成功
+0 警告
+0 无致命错误
+0 致命错误
+
+操作注释：
+
+无
+
+安装程序日志详细信息：
+
+检查磁盘空间：                   
+                          状态： 成功
+                          其他注释： 注释 - 所需磁盘空间：18,894,778 字节 可用磁盘空间：7,348,142,080 字节 
+
+定制操作：                     com.siemens.plm.scl.Common.actions.ExtractMajorVersion
+                          状态： 成功
+
+
+
+
+
+
+
+
+
+
+
+
+Running install action WaitForProcessExit
+
+
+  process name: remove; timeout: 30000
+
+定制操作：                     com.siemens.plm.scl.Win.actions.WaitForProcessExit
+                          状态： 成功
+
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c systeminfo | find "OS Version" | find /V "BIOS" & systeminfo | find "OS Name" & systeminfo | find "System Type"
+  ExitCode                : 1
+  Standard Output         : 
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+
+Installer Title : Siemens PLM License Server_wntx64_8.2.4.1
+
+定制操作：                     com.siemens.plm.scl.Common.actions.LogInstallerInformation
+                          状态： 成功
+
+获取注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： Architecture
+                          状态： 成功
+
+获取注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： Architecture
+                          状态： 成功
+
+获取注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： DisplayVersion
+                          状态： 成功
+
+获取注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： DisplayVersion
+                          状态： 成功
+
+获取注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\FLEXlm License Manager\Siemens PLM License Server
+                          值名称： Lmgrd
+                          状态： 成功
+
+获取注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\FLEXlm License Manager\Siemens PLM License Server
+                          值名称： Lmgrd
+                          状态： 成功
+
+
+Executing SameVersionExists
+
+
+  installing product version: 8.2.4.1
+  existing product version: 
+
+定制操作：                     com.siemens.plm.scl.Common.actions.SameVersionExists
+                          状态： 成功
+
+
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{5ACD451F-AE53-4375-9AF5-3CF0801362DA} does not exist for value name : InstallLocation
+
+
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5ACD451F-AE53-4375-9AF5-3CF0801362DA} does not exist for value name : InstallLocation
+
+
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{1842532D-0AD3-4470-8E32-798BB63EF496} does not exist for value name : InstallLocation
+
+
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{1842532D-0AD3-4470-8E32-798BB63EF496} does not exist for value name : InstallLocation
+
+
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{26EECDC0-AD04-4BB0-9F15-5C7763933790} does not exist for value name : InstallLocation
+
+
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{26EECDC0-AD04-4BB0-9F15-5C7763933790} does not exist for value name : InstallLocation
+
+
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B40EED7A-63D4-4ED2-910D-9A64FF94DF22} does not exist for value name : InstallLocation
+
+
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B40EED7A-63D4-4ED2-910D-9A64FF94DF22} does not exist for value name : InstallLocation
+
+定制操作：                     com.siemens.plm.scl.Common.actions.CheckUGSLicensingInstalled
+                          状态： 成功
+
+执行命令:                     tasklist.exe  /fi "IMAGENAME eq lmgrd.exe"
+                          状态： 成功
+
+执行命令:                     tasklist.exe  /fi "IMAGENAME eq ugslmd.exe"
+                          状态： 成功
+
+定制操作：                     com.siemens.plm.scl.Common.actions.ExistingLicenseManagerDaemons
+                          状态： 成功
+
+定制操作：                     com.siemens.plm.scl.Common.actions.SetInstallDirectory
+                          状态： 成功
+
+
+
+Running SetLicenseFile action:
+
+
+Using license file: D:\SOFT\UG_NX12.0正式版\破解文件\splm8.lic
+
+定制操作：                     com.siemens.plm.scl.Common.actions.SetLicenseFile
+                          状态： 成功
+
+
+Running action ValidateLicenseFile:
+
+
+  license file: D:\SOFT\UG_NX12.0正式版\破解文件\splm8.lic
+
+
+  vendor daemon name: ugslmd
+
+
+  license file analysis:
+    server count: 1
+    serverPresent: true
+    vendorPresent: true
+    validFile: true
+    nodeLocked: false
+    server(s): [this_host]
+
+
+  this host name: YS-201706020848CAM
+
+定制操作：                     com.siemens.plm.scl.Common.actions.ValidateLicenseFile
+                          状态： 成功
+
+检查磁盘空间：                   C:\Program Files\Siemens\PLMLicenseServer
+                          状态： 成功
+                          其他注释： 注释 - 所需磁盘空间：18,894,778 字节 可用磁盘空间：7,403,880,448 字节 
+
+安装目录：                     C:\Users\YS\AppData\Local\Temp\346303.tmp\
+                          状态： 成功
+                          其他注释： 注释 - 该目录已存在。
+
+安装文件：                     C:\Users\YS\AppData\Local\Temp\346303.tmp\installs32.exe
+                          状态： 成功
+
+安装文件：                     C:\Users\YS\AppData\Local\Temp\346303.tmp\installs64.exe
+                          状态： 成功
+
+安装文件：                     C:\Users\YS\AppData\Local\Temp\346303.tmp\modreg32.exe
+                          状态： 成功
+
+安装文件：                     C:\Users\YS\AppData\Local\Temp\346303.tmp\modreg64.exe
+                          状态： 成功
+
+安装目录：                     C:\Program Files\Siemens\PLMLicenseServer\
+                          状态： 成功
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c C:\Users\YS\AppData\Local\Temp\346303.tmp\installs32.exe -r -n "UGS License Server (ugslmd)"
+  ExitCode                : 0
+  Standard Output         : UGS License Server (ugslmd) service is already removed.
+
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c C:\Users\YS\AppData\Local\Temp\346303.tmp\installs64.exe -r -n "Siemens PLM License Server"
+  ExitCode                : 0
+  Standard Output         : Siemens PLM License Server service is already removed.
+
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c C:\Users\YS\AppData\Local\Temp\346303.tmp\installs32.exe -r -n "Siemens PLM License Server"
+  ExitCode                : 0
+  Standard Output         : Siemens PLM License Server service is already removed.
+
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c C:\Users\YS\AppData\Local\Temp\346303.tmp\modreg32.exe "HKLM\SOFTWARE\Wow6432Node\FLEXlm License Manager\UGS License Server (ugslmd)"
+  ExitCode                : 1
+  Standard Output         : 
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c C:\Users\YS\AppData\Local\Temp\346303.tmp\modreg32.exe "HKLM\SOFTWARE\FLEXlm License Manager\UGS License Server (ugslmd)"
+  ExitCode                : 1
+  Standard Output         : 
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c C:\Users\YS\AppData\Local\Temp\346303.tmp\modreg32.exe "HKLM\SOFTWARE\FLEXlm License Manager\Siemens PLM License Server"
+  ExitCode                : 1
+  Standard Output         : 
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c C:\Users\YS\AppData\Local\Temp\346303.tmp\modreg32.exe "HKLM\SOFTWARE\Wow6432Node\FLEXlm License Manager\Siemens PLM License Server"
+  ExitCode                : 1
+  Standard Output         : 
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+Running Custom Execute Command or Script ...
+
+
+Execute Command/Script Summary:
+-------------------------------
+  Command/Script Executed : cmd /c C:\Users\YS\AppData\Local\Temp\346303.tmp\modreg64.exe "HKLM\SOFTWARE\FLEXlm License Manager\Siemens PLM License Server"
+  ExitCode                : 1
+  Standard Output         : 
+  Standard Error          : 
+
+
+定制操作：                     com.siemens.plm.scl.Plugin.actions.ExecuteCommandScript
+                          状态： 成功
+
+
+Running action CopyLicenseFile:
+
+
+  input license: D:\SOFT\UG_NX12.0正式版\破解文件\splm8.lic  
+  output license: C:\Program Files\Siemens\PLMLicenseServer/splm8.lic
+
+
+  using server name: YS-201706020848CAM
+
+定制操作：                     com.siemens.plm.scl.Common.actions.CopyLicenseFile
+                          状态： 成功
+
+安装目录：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\
+                          状态： 成功
+
+安装卸载程序：                   Siemens PLM License Server（安装卸载程序的所有组件）
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\Uninstall.exe
+                          状态： 成功
+
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\Uninstall.lax
+                          状态： 成功
+
+安装目录：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\resource\
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\resource\iawin64_x64.dll
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\resource\iawin32.dll
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\resource\win64_32_x64.exe
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\resource\remove.exe
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\resource\invoker.exe
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： DisplayName
+                          值数据： Siemens PLM License Server
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： UninstallString
+                          值数据： "C:\Program Files\Siemens\PLMLicenseServer\UninstallerData\Uninstall.exe"
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： Publisher
+                          值数据： Siemens Product Lifecycle Management Software Inc.
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： URLInfoAbout
+                          值数据： http://www.siemens.com/gtac
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： URLUpdateInfo
+                          值数据： http://www.siemens.com/gtac
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： ProductID
+                          值数据： 71fadd39-1eff-11b2-9986-ef3742e6c36d
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： InstallLocation
+                          值数据： C:\Program Files\Siemens\PLMLicenseServer
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： InstallDate
+                          值数据： Fri Nov 17 09:51:01 CST 2017
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： HelpLink
+                          值数据： http://www.siemens.com/gtac
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： DisplayVersion
+                          值数据： 8.2.4.1
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： Comments
+                          值数据： Siemens PLM 许可证服务器
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： EstimatedSize
+                          值数据： 6522
+                          状态： 成功
+
+安装卸载程序：                   Siemens PLM License Server（安装卸载程序的所有组件）
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\getcid.exe
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\ugslmd.exe
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\lmgrd.exe
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\lmutil.exe
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\lmtools.exe
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\installs.exe
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Siemens PLM License Server
+                          值名称： Architecture
+                          值数据： x86_64
+                          状态： 成功
+
+执行目标文件:                   installs.exe
+                          状态： 成功
+
+
+Execute Command/Script Summary:
+-------------------------------
+  ExitCode       : 0
+  Standard Output: 
+FlexNet License Manager is successfully installed 
+as one of your Windows Services.  Some handy tips: 
+
+
+	* The FlexNet License Manager will be automatically started
+	  every time your system is booted.
+
+	* The FlexNet service log file is lmgrd.log in your NT system
+	  directory.
+
+	* To remove FlexNet License Manager, type 'installs -r'
+
+
+********************************************************
+ The permissions of one of the files that you just installed seems 
+ to have the correct settings.
+
+  Standard Error : 
+
+
+定制操作：                     com.siemens.plm.scl.Common.actions.LogExecuteCommand
+                          状态： 成功
+
+创建注册表条目：                  关键字： HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Siemens PLM License Server
+                          值名称： Description
+                          值数据： License server for Siemens PLM Software products v8.2.4.1 (64bit)
+                          状态： 成功
+
+修改文本文件 － 在单个文件中:   新建文件 C:\Program Files\Siemens\PLMLicenseServer\VERSION.TXT
+                          状态： 成功
+
+安装目录：                     C:\Program Files\Siemens\PLMLicenseServer\HardwareKey\
+                          状态： 成功
+
+安装文件：                     C:\Program Files\Siemens\PLMLicenseServer\HardwareKey\Sentinel System Driver Installer 7.5.7.exe
+                          状态： 成功
+
+安装目录：                     C:\Users\YS\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Siemens PLM License Server\
+                          状态： 成功
+
+创建快捷方式：                   C:\Users\YS\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Siemens PLM License Server\Uninstall.lnk
+                          状态： 成功
+
+创建快捷方式：                   C:\Users\YS\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Siemens PLM License Server\lmtools.lnk
+                          状态： 成功
+
+
+正在启动 Windows Service： Siemens PLM License Server
+                          状态： 成功
+
+
+Running SetLicenseFile action:
+
+定制操作：                     com.siemens.plm.scl.Common.actions.Sleep20Seconds
+                          状态： 成功
+
+执行命令:                     tasklist.exe  /fi "IMAGENAME eq lmgrd.exe"
+                          状态： 成功
+
+执行命令:                     tasklist.exe  /fi "IMAGENAME eq ugslmd.exe"
+                          状态： 成功
+
+
+Running SetLicenseFile action:
+
+定制操作：                     com.siemens.plm.scl.Common.actions.Sleep20Seconds
+                          状态： 成功
+
+定制操作：                     com.siemens.plm.scl.Common.actions.CompleteInstall
+                          状态： 成功
+
+
+Post-Install Summary:
+  product: Siemens PLM License Server
+  version: 8.2.4.1
+  install directory: C:\Program Files\Siemens\PLMLicenseServer
+  license file: D:\SOFT\UG_NX12.0正式版\破解文件\splm8.lic
+  install log: install.log
+  server log: C:\Program Files\Siemens\PLMLicenseServer\splm_ugslmd.log
+  status: 
+    Success
+
+
+定制操作：                     com.siemens.plm.scl.Common.actions.LogSummary
+                          状态： 成功
+
