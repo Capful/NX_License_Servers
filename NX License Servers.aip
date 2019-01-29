@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="15.1" version="15.1" Modules="professional" RootPath="." Language="zh" Id="{94570A52-677C-4329-8BC4-105DA1884FBC}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="15.1" version="15.1" PreviousModules="professional" Modules="enterprise" RootPath="." Language="zh" Id="{94570A52-677C-4329-8BC4-105DA1884FBC}">
   <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
-    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiJavaComponent;MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;ActSyncAppComponent"/>
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;ActSyncAppComponent"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_COLOR_DISABLED_TEXT" Value="3026478" MultiBuildValue="DefaultBuild:15461355" MsiKey="AI_COLOR_DISABLED_TEXT"/>
+    <ROW Property="AI_CONTROL_VISUAL_STYLE" Value="2960685;4276545;6776679;16176031" MultiBuildValue="DefaultBuild:16777215;15859690;7579735;3957806" MsiKey="AI_CONTROL_VISUAL_STYLE"/>
+    <ROW Property="AI_CONTROL_VISUAL_STYLE_EX" Value="1513239;3026478;3026478" MultiBuildValue="DefaultBuild:16514043;15461355;15461355" MsiKey="AI_CONTROL_VISUAL_STYLE_EX"/>
+    <ROW Property="AI_CONTROL_VISUAL_STYLE_FLAT" MultiBuildValue="DefaultBuild:15859690;15859690;7579735;3957806" MsiKey="AI_CONTROL_VISUAL_STYLE_FLAT"/>
+    <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="DefaultBuild:aiui"/>
     <ROW Property="AI_FINDEXE_TITLE" Value="选择 [|ProductName] 安装包" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_FrameBtnsColor" Value="metroblack" MultiBuildValue="DefaultBuild:metrogreen" MsiKey="AI_FrameBtnsColor"/>
+    <ROW Property="AI_FrameColor" Value="metroblack" MultiBuildValue="DefaultBuild:metrogreen" MsiKey="AI_FrameColor"/>
+    <ROW Property="AI_PRODUCTNAME_ARP" Value="NX License Servers"/>
+    <ROW Property="AI_ThemeStyle" Value="default" MultiBuildValue="DefaultBuild:metrogreen" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="此安装数据库包含了安装 [|ProductName] 所需的逻辑和数据。" ValueLocId="*"/>
-    <ROW Property="ARPNOREPAIR" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPNOREPAIR" Value="1" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="ARPPRODUCTICON" Value="logo.exe" Type="8"/>
+    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
     <ROW Property="D" Value="D:\Program Files (x86)"/>
     <ROW Property="Manufacturer" Value="Capful"/>
     <ROW Property="ProductCode" Value="2052:{0B56CDF0-C9C6-4338-A337-8D4DC537F1B1} " Type="16"/>
@@ -33,7 +44,8 @@
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AI_ExePath" ComponentId="{0CD958D8-27BC-4034-A288-509A837A7CFD}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
+    <ROW Component="AI_CustomARPName" ComponentId="{CADBB748-3BBB-4DBC-B601-63B44F903B28}" Directory_="APPDIR" Attributes="260" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_ExePath" ComponentId="{1BBFB349-5AD2-4809-A963-C60BE7D0A9F8}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
     <ROW Component="D" ComponentId="{8DD09162-164B-46D1-BE11-005EFAD9E6F4}" Directory_="APPDIR" Attributes="260" KeyPath="D" Options="1"/>
     <ROW Component="LMGRD_LOG_FILE" ComponentId="{B6DB19C7-69FC-4135-8502-DA64BB8513DC}" Directory_="APPDIR" Attributes="260" KeyPath="LMGRD_LOG_FILE"/>
     <ROW Component="License" ComponentId="{D57F7FC4-4A22-46D8-9863-32A6DB8DE4DE}" Directory_="APPDIR" Attributes="260" KeyPath="License"/>
@@ -52,7 +64,7 @@
     <ROW Component="ugslmd.exe" ComponentId="{17A1BF1A-8B02-419A-B98D-5889C4EDDD1B}" Directory_="NXLicenseServers_Dir" Attributes="256" KeyPath="ugslmd.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="Basics" Title="Basics" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath D LMGRD_LOG_FILE License Lmgrd ProductInformation SPLM_LICENSE_SERVER Service TSAccess cmdlineparams getcid.exe install.log installs.exe lmgrd.exe lmtools.exe lmutil.exe ugslmd.exe"/>
+    <ROW Feature="Basics" Title="Basics" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName AI_ExePath D LMGRD_LOG_FILE License Lmgrd ProductInformation SPLM_LICENSE_SERVER Service TSAccess cmdlineparams getcid.exe install.log installs.exe lmgrd.exe lmtools.exe lmutil.exe ugslmd.exe"/>
     <ATTRIBUTE name="CurrentFeature" value="Basics"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
@@ -76,7 +88,7 @@
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="Setup Files" Languages="zh" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="icon\Install.ico" UseLargeSchema="true" ExeName="[|ProductName] v [|ProductVersion]" MsiPackageType="x64"/>
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" PackageFolder="Setup Files" Languages="zh" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="icon\Install.ico" ExtUI="true" UseLargeSchema="true" ExeName="[|ProductName] v [|ProductVersion]" MsiPackageType="x64"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
@@ -84,17 +96,16 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
-    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
-    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
-    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
-    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="InstallDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\InstallDlg.aip"/>
+    <ROW Fragment="LicenseAgreementDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\LicenseAgreementDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;surface\fragments\SequenceDialogs.aip"/>
     <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
     <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
-    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;surface\fragments\UI.aip"/>
     <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
-    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
-    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
-    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\VerifyRepairDlg.aip"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
     <ROW Action="AI_DeleteLzma" Description="正在从存档删除文件部署" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
@@ -103,52 +114,250 @@
     <ROW Action="AI_ExtractLzma" Description="正在从存档中提取文件" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
-    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
-    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
     <ROW Property="D" Signature_="D"/>
     <ROW Property="D" Signature_="D_1"/>
     <ROW Property="D" Signature_="D_2"/>
     <ROW Property="D" Signature_="D_3"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="ExternalUICleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ExternalUICleaner.dll"/>
     <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
     <ROW Name="ShortcutFlags.dll" SourcePath="&lt;AI_CUSTACTS&gt;ShortcutFlags.dll"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
     <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ROW Dialog_="AdminBrowseDlg" Control="DirectoryCombo" Type="DirectoryCombo" X="68" Y="131" Width="209" Height="16" Attributes="393227" Property="TARGETDIR" Order="800" MsiKey="AdminBrowseDlg#DirectoryCombo"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="900" MsiKey="AdminBrowseDlg#ProductLogo"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="Up" Type="PushButton" X="285" Y="131" Width="19" Height="19" Attributes="3670019" Text="[UpDirIcon]" Help="向上一级|" Order="1000" HelpLocId="Control.Help.BrowseDlg#Up" MsiKey="AdminBrowseDlg#Up"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="NewDirButton" Type="PushButton" X="310" Y="131" Width="19" Height="19" Attributes="3670019" Text="[NewDirIcon]" Help="创建新文件夹|" Order="1100" HelpLocId="Control.Help.BrowseDlg#NewFolder" MsiKey="AdminBrowseDlg#NewDirButton"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="PathLabel" Type="Text" X="21" Y="278" Width="75" Height="18" Attributes="65539" Text="文件夹名称(&amp;F):" Order="1200" TextLocId="Control.Text.BrowseDlg#PathLabel" MsiKey="AdminBrowseDlg#PathLabel"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="Title" Type="Text" X="18" Y="92" Width="312" Height="23" Attributes="196611" Text="更改当前目标文件夹" TextStyle="[SubTitleStyle]" Order="1300" TextLocId="Control.Text.BrowseDlg#Title" MsiKey="AdminBrowseDlg#Title"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1400"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1500" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1600"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1700"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="900" MsiKey="AdminInstallPointDlg#ProductLogo"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="BrowseButton" Type="ImageButton" X="311" Y="225" Width="21" Height="20" Attributes="3" Text="[browsebutton]" TextStyle="DlgFont8" Order="1000" MsiKey="AdminInstallPointDlg#BrowseButton" ExtType="ImageButton" ExtData="..." ExtDataLocId="Metro.Control.ExtData.WelcomeDlg.BrowseTxt"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1200" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1300"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1400"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="600" MsiKey="AdminWelcomeDlg#ProductLogo"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="700"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="800" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1000"/>
+    <ROW Dialog_="BrowseDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="1200" MsiKey="BrowseDlg#ProductLogo"/>
+    <ROW Dialog_="BrowseDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1300"/>
+    <ROW Dialog_="BrowseDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1400" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="BrowseDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1500"/>
+    <ROW Dialog_="BrowseDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1600"/>
+    <ROW Dialog_="CustomizeDlg" Control="CustomizeDlgDialogInitializer" Type="DialogInitializer" X="0" Y="0" Width="0" Height="0" Attributes="0" Order="-1" TextLocId="-" HelpLocId="-" ExtDataLocId="-"/>
+    <ROW Dialog_="CustomizeDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="1200" MsiKey="CustomizeDlg#ProductLogo"/>
+    <ROW Dialog_="CustomizeDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="1300" MsiKey="CustomizeDlg#AdvInst"/>
+    <ROW Dialog_="CustomizeDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1400"/>
+    <ROW Dialog_="CustomizeDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1500" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="CustomizeDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1600"/>
+    <ROW Dialog_="CustomizeDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1700"/>
+    <ROW Dialog_="DiskCostDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="600" MsiKey="DiskCostDlg#ProductLogo"/>
+    <ROW Dialog_="DiskCostDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="700"/>
+    <ROW Dialog_="DiskCostDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="800" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="DiskCostDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="DiskCostDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1000"/>
+    <ROW Dialog_="ExitDialog" Control="Description" Type="Text" X="17" Y="105" Width="310" Height="31" Attributes="196611" Text="[ProductName] v [ProductVersion] 已成功[Finish1]。" Order="700" MsiKey="ExitDialog#Description"/>
+    <ROW Dialog_="ExitDialog" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="800" MsiKey="ExitDialog#ProductLogo"/>
+    <ROW Dialog_="ExitDialog" Control="ReadmeButton" Type="ImageButton" X="77" Y="155" Width="92" Height="123" Attributes="3" Text="[ViewReadMeButton]" Order="900" MsiKey="ExitDialog#ReadmeButton" ExtType="ImageButton"/>
+    <ROW Dialog_="ExitDialog" Control="MetroReadmeText" Type="Text" X="83" Y="278" Width="86" Height="16" Attributes="196611" Text="README" Order="1000" TextLocId="Metro.Control.Text.ExitDialog#Readme" MsiKey="ExitDialog#MetroReadmeText"/>
+    <ROW Dialog_="ExitDialog" Control="RunButton" Type="ImageButton" X="176" Y="155" Width="92" Height="123" Attributes="3" Text="[MetroRunApplicationButton]" Order="1100" MsiKey="ExitDialog#RunButton" ExtType="ImageButton"/>
+    <ROW Dialog_="ExitDialog" Control="RunLabel" Type="Text" X="182" Y="278" Width="86" Height="16" Attributes="196611" Text="运行" Order="1200" TextLocId="Metro.Control.Text.ExitDialog#Run" MsiKey="ExitDialog#RunLabel"/>
+    <ROW Dialog_="ExitDialog" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="1300" MsiKey="ExitDialog#AdvInst"/>
+    <ROW Dialog_="ExitDialog" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1400"/>
+    <ROW Dialog_="ExitDialog" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1500" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="ExitDialog" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1600"/>
+    <ROW Dialog_="ExitDialog" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1700"/>
+    <ROW Dialog_="FatalError" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="1000" MsiKey="FatalError#ProductLogo"/>
+    <ROW Dialog_="FatalError" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="FatalError" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1200" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="FatalError" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1300"/>
+    <ROW Dialog_="FatalError" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1400"/>
+    <ROW Dialog_="FilesInUse" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="800" MsiKey="FilesInUse#ProductLogo"/>
+    <ROW Dialog_="FilesInUse" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="900" MsiKey="FilesInUse#AdvInst"/>
+    <ROW Dialog_="FilesInUse" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1000"/>
+    <ROW Dialog_="FilesInUse" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1100" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="FilesInUse" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1200"/>
+    <ROW Dialog_="FilesInUse" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1300"/>
+    <ROW Dialog_="InstallDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1200" MsiKey="InstallDlg#ProductNameTitle"/>
+    <ROW Dialog_="InstallDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer" Order="1300" TextLocId="Metro.Control.Text.Manufacturer" MsiKey="InstallDlg#CompanyText"/>
+    <ROW Dialog_="InstallDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="1400" MsiKey="InstallDlg#ProductLogo"/>
+    <ROW Dialog_="InstallDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1500"/>
+    <ROW Dialog_="InstallDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1600"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="PrintBtn" Type="ImageButton" X="301" Y="92" Width="28" Height="28" Attributes="3" Text="[MetroPrintButton]" Order="700" MsiKey="LicenseAgreementDlg#PrintBtn" AssociatedCtrl="AgreementText" ExtType="ImageButton"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="800" MsiKey="LicenseAgreementDlg#ProductLogo"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="900" MsiKey="LicenseAgreementDlg#AdvInst"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1000"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1100" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1200"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1300"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="1400" MsiKey="MaintenanceTypeDlg#AdvInst"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="SubTitle" Type="Text" X="17" Y="105" Width="312" Height="20" Attributes="196611" Text="修改、修复或删除安装" TextStyle="[SubTitleStyle]" Order="1500" TextLocId="Control.Text.MaintenanceTypeDlg#Title" MsiKey="MaintenanceTypeDlg#SubTitle"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="1600" MsiKey="MaintenanceTypeDlg#ProductLogo"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="MetroModifyButton" Type="ImageButton" X="27" Y="155" Width="92" Height="123" Attributes="3" Text="[ModifyButton]" Order="1700" MsiKey="MaintenanceTypeDlg#MetroModifyButton" ExtType="ImageButton"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="MetroRepairButton" Type="ImageButton" X="128" Y="155" Width="92" Height="123" Attributes="3" Text="repair.png" Order="1800" MsiKey="MaintenanceTypeDlg#MetroRepairButton" ExtType="ImageButton"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="MetroRemoveButton" Type="ImageButton" X="228" Y="155" Width="92" Height="123" Attributes="3" Text="remove.png" Order="1900" MsiKey="MaintenanceTypeDlg#MetroRemoveButton" ExtType="ImageButton"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="MetroRemoveText" Type="Text" X="234" Y="278" Width="86" Height="15" Attributes="65539" Text="删除(&amp;D)" Order="2000" TextLocId="Control.Text.MaintenanceTypeDlg#RemoveLabel" MsiKey="MaintenanceTypeDlg#MetroRemoveText"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="MetroRepairText" Type="Text" X="133" Y="278" Width="86" Height="16" Attributes="65539" Text="修复(&amp;P)" Order="2100" TextLocId="Control.Text.MaintenanceTypeDlg#RepairLabel" MsiKey="MaintenanceTypeDlg#MetroRepairText"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="MetroModifyText" Type="Text" X="33" Y="278" Width="86" Height="16" Attributes="65539" Text="修改(&amp;M)" Order="2200" TextLocId="Control.Text.MaintenanceTypeDlg#ChangeLabel" MsiKey="MaintenanceTypeDlg#MetroModifyText"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="2300"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="2400" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="2500"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="2600"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="100" MsiKey="MsiRMFilesInUse#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="800" MsiKey="MsiRMFilesInUse#ProductLogo"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1000" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="600" MsiKey="OutOfDiskDlg#ProductLogo"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="700"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="800" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1000"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="700" MsiKey="OutOfRbDiskDlg#ProductLogo"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="Text" Type="Text" X="17" Y="139" Width="312" Height="53" Attributes="196611" Text="突出显示的卷的可用空间不足。您可以选择不同的目标磁盘或文件删除，请降低您要安装的组件。" Order="800" TextLocId="Metro.Control.Text.OutOfDiskDlg#Text" MsiKey="OutOfRbDiskDlg#Text"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1000" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="PatchWelcomeDlgDialogInitializer" Type="DialogInitializer" X="0" Y="0" Width="0" Height="0" Attributes="0" Order="-1" TextLocId="-" HelpLocId="-" ExtDataLocId="-"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="600" MsiKey="PatchWelcomeDlg#ProductLogo"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="700"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="800" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1000"/>
+    <ROW Dialog_="PrepareDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="360" Height="120" Attributes="1" Text="[BackgroundPrepare]" Order="100" MsiKey="PrepareDlg#Bitmap"/>
+    <ROW Dialog_="PrepareDlg" Control="ProgressAnimation" Type="Bitmap" X="124" Y="83" Width="113" Height="30" Attributes="1048577" Text="PrepareDlgProgress.gif" Order="600" MsiKey="PrepareDlg#ProgressAnimation"/>
+    <ROW Dialog_="PrepareDlg" Control="ProductNameTitle" Type="Text" X="106" Y="38" Width="217" Height="36" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="800" MsiKey="PrepareDlg#ProductNameTitle"/>
+    <ROW Dialog_="PrepareDlg" Control="CompanyText" Type="Text" X="155" Y="27" Width="40" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer" Order="900" TextLocId="Metro.Control.Text.Manufacturer" MsiKey="PrepareDlg#CompanyText"/>
+    <ROW Dialog_="PrepareDlg" Control="ProductLogo" Type="Bitmap" X="29" Y="21" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="1000" MsiKey="PrepareDlg#ProductLogo"/>
+    <ROW Dialog_="PrepareDlg" Control="Text_1" Type="Text" X="106" Y="8" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="PrepareDlg" Control="Text_2" Type="Text" X="274" Y="78" Width="53" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
+    <ROW Dialog_="ProgressDlg" Control="ActionText" Type="Text" X="17" Y="196" Width="309" Height="11" Attributes="196611" TextStyle="[SubnoteFontStyle]" Order="500" MsiKey="ProgressDlg#ActionText"/>
+    <ROW Dialog_="ProgressDlg" Control="ProgressBar" Type="StyledProgressBar" X="17" Y="178" Width="312" Height="11" Attributes="65537" Text="ProgressImage.png" Order="600" MsiKey="ProgressDlg#ProgressBar" ExtType="StyledProgressBar"/>
+    <ROW Dialog_="ProgressDlg" Control="Text" Type="Text" X="17" Y="105" Width="312" Height="30" Attributes="196611" Text="请稍候，正在[Progress2] [ProductName]，可能需要几分钟。" Order="700" TextLocId="Control.Text.ProgressDlg#Text" MsiKey="ProgressDlg#Text"/>
+    <ROW Dialog_="ProgressDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="800" MsiKey="ProgressDlg#ProductLogo"/>
+    <ROW Dialog_="ProgressDlg" Control="StatusLabel" Type="Text" X="17" Y="163" Width="45" Height="13" Attributes="196611" Text="状态:" TextStyle="[SubnoteFontStyle]" Order="900" TextLocId="Control.Text.ProgressDlg#StatusLabel" MsiKey="ProgressDlg#StatusLabel"/>
+    <ROW Dialog_="ProgressDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="1000" MsiKey="ProgressDlg#AdvInst"/>
+    <ROW Dialog_="ProgressDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="ProgressDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1200" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="ProgressDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1300"/>
+    <ROW Dialog_="ProgressDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1400"/>
+    <ROW Dialog_="ResumeDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="[ProductName]" TextStyle="[ProductNameForSplash]" Order="700" TextLocId="Metro.Control.Text.ProductName" MsiKey="ResumeDlg#ProductNameTitle"/>
+    <ROW Dialog_="ResumeDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="900" MsiKey="ResumeDlg#ProductLogo"/>
+    <ROW Dialog_="UserExit" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="700" MsiKey="UserExit#ProductLogo"/>
+    <ROW Dialog_="UserExit" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="800" MsiKey="UserExit#AdvInst"/>
+    <ROW Dialog_="UserExit" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="UserExit" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1000" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="UserExit" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="UserExit" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="100" MsiKey="VerifyReadyDlg#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="Back" Type="PushButton" X="5" Y="381" Width="11" Height="11" Attributes="2" Text="Control.Text.VerifyReadyDlg#Back" Help="返回|" Order="200" TextLocId="Control.Text.VerifyReadyDlg#Back" HelpLocId="Air.Control.Help#Back" MsiKey="VerifyReadyDlg#Back" Options="1" ExtType="PushButton" ExtData="[ButtonText_Back]" ExtDataLocId="-"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="ReadyToInstall" Type="Text" X="17" Y="105" Width="312" Height="19" Attributes="196611" Text="准备安装" TextStyle="[SubTitleStyle]" Order="400" TextLocId="Control.Text.VerifyReadyDlg#Title" MsiKey="VerifyReadyDlg#ReadyToInstall"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="Text_2" Type="Text" X="17" Y="139" Width="312" Height="100" Attributes="65539" Text="安装程序现在准备开始安装 [ProductName] 到您的计算机中。" Order="500" TextLocId="Control.Text.VerifyReadyDlg#Description" MsiKey="VerifyReadyDlg#Text_2"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="InstallButton" Type="ImageButton" X="251" Y="359" Width="78" Height="28" Attributes="3" Text="[metrobuttonimage]" TextStyle="[MetroButtonText]" Order="600" MsiKey="VerifyReadyDlg#InstallButton" ExtType="ImageButton" ExtData="安装" ExtDataLocId="Metro.Control.ExtData.VerifyReadyDlg#InstallButton"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="[ProductName]" TextStyle="[ProductNameForSplash]" Order="700" TextLocId="Metro.Control.Text.ProductName" MsiKey="VerifyReadyDlg#ProductNameTitle"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="CompanyText" Type="Text" X="83" Y="16" Width="191" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="[ManufacturerFont]" Order="800" TextLocId="Metro.Control.Text.Manufacturer" MsiKey="VerifyReadyDlg#CompanyText"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="900" MsiKey="VerifyReadyDlg#ProductLogo"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="1000" MsiKey="VerifyReadyDlg#AdvInst"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="100" MsiKey="VerifyRemoveDlg#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="700" MsiKey="VerifyRemoveDlg#ProductLogo"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="800" MsiKey="VerifyRemoveDlg#AdvInst"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1000" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="100" MsiKey="VerifyRepairDlg#Bitmap"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="Repair" Type="ImageButton" X="251" Y="359" Width="78" Height="28" Attributes="3" Text="[metrobuttonimage]" TextStyle="[MetroButtonText]" Order="200" MsiKey="VerifyRepairDlg#Repair" Options="1" ExtType="ImageButton" ExtData="修复(&amp;P)" ExtDataLocId="Metro.Control.ExtData.VerifyRepairDlg#Repair"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="700" MsiKey="VerifyRepairDlg#ProductLogo"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="800" MsiKey="VerifyRepairDlg#AdvInst"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="[ProductNameForSplash]" Order="900"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="CompanyText" Type="Text" X="154" Y="24" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1000" TextLocId="Metro.Control.Text.Manufacturer"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="[ProductNameForSplash]" Order="1100"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="Text_2" Type="Text" X="276" Y="66" Width="38" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
+    <ATTRIBUTE name="DeletedRows" value="AdminBrowseDlg#CompanyText@AdminBrowseDlg#ProductNameTitle@AdminInstallPointDlg#CompanyText@AdminInstallPointDlg#ProductNameTitle@AdminWelcomeDlg#CompanyText@AdminWelcomeDlg#ProductNameTitle@CustomizeDlg#CompanyText@CustomizeDlg#ProductNameTitle@DiskCostDlg#CompanyText@DiskCostDlg#ProductNameTitle@FatalError#CompanyText@FatalError#ProductNameTitle@FilesInUse#CompanyText@FilesInUse#ProductNameTitle@LicenseAgreementDlg#CompanyText@LicenseAgreementDlg#ProductNameTitle@MaintenanceTypeDlg.aip@MsiRMFilesInUse#CompanyText@MsiRMFilesInUse#ProductNameTitle@PatchWelcomeDlg#CompanyText@PatchWelcomeDlg#ProductNameTitle@UI.aip@UserExit#CompanyText@UserExit#ProductNameTitle@VerifyRemoveDlg.aip@VerifyRepairDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlConditionComponent">
+    <ROW Dialog_="PrepareDlg" Control_="Text_1" Action="Hide" Condition="NOT AIEXTERNALUI"/>
+    <ATTRIBUTE name="DeletedRows" value="AdminBrowseDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@AdminInstallPointDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@AdminWelcomeDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@BrowseDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@CustomizeDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@ExitDialog#ProductNameTitle#Hide#NOT AIEXTERNALUI@FatalError#ProductNameTitle#Hide#NOT AIEXTERNALUI@MaintenanceTypeDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@OutOfDiskDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@OutOfRbDiskDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@ProgressDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@UserExit#ProductNameTitle#Hide#NOT AIEXTERNALUI@VerifyRemoveDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI@VerifyRepairDlg#ProductNameTitle#Hide#NOT AIEXTERNALUI"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
-    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
-    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
-    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
-    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
-    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
-    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="InstallDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="301"/>
+    <ROW Dialog_="InstallDlg" Control_="YouMustAgreeCtrl" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="301"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="NewDialog" Argument="InstallDlg" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="1"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="101"/>
     <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
-    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
-    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="699"/>
     <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
-    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="199" Options="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="699"/>
     <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
-    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
-    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
-    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
-    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Modify" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="99"/>
+    <ROW Dialog_="InstallDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="302" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="Next" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="303" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_INSTALL AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="304" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[AI_ButtonText_Next_Orig]" Argument="[ButtonText_Next]" Condition="AI_INSTALL" Ordering="101" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[ButtonText_Next]" Argument="[[AI_CommitButton]]" Condition="AI_INSTALL" Ordering="102" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[AI_Text_Next_Orig]" Argument="[Text_Next]" Condition="AI_INSTALL" Ordering="103" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[Text_Next]" Argument="[Text_Install]" Condition="AI_INSTALL" Ordering="104" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="YouMustAgreeCtrl" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_INSTALL" Ordering="302" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="YouMustAgreeCtrl" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_INSTALL" Ordering="303" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="Back" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_INSTALL" Ordering="0" Options="2"/>
+    <ROW Dialog_="InstallDlg" Control_="Back" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_INSTALL" Ordering="1" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND AiLicenseAgreement AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="102" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND AiLicenseAgreement AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="103" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_INSTALL AND AiLicenseAgreement AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="104" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[AI_ButtonText_Next_Orig]" Argument="[ButtonText_Next]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="101" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[ButtonText_Next]" Argument="[[AI_CommitButton]]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="102" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[AI_Text_Next_Orig]" Argument="[Text_Next]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="103" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[Text_Next]" Argument="[Text_Install]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="104" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="2" Options="2"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="3" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Modify" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_MAINT AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="102" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Modify" Event="EnableRollback" Argument="False" Condition="AI_MAINT AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="103" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Modify" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_MAINT AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="104" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="CustomizeDlgDialogInitializer" Event="[AI_ButtonText_Next_Orig]" Argument="[ButtonText_Next]" Condition="AI_MAINT" Ordering="0" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="CustomizeDlgDialogInitializer" Event="[ButtonText_Next]" Argument="[[AI_CommitButton]]" Condition="AI_MAINT" Ordering="1" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="CustomizeDlgDialogInitializer" Event="[AI_Text_Next_Orig]" Argument="[Text_Next]" Condition="AI_MAINT" Ordering="2" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="CustomizeDlgDialogInitializer" Event="[Text_Next]" Argument="[Text_Install]" Condition="AI_MAINT" Ordering="3" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_MAINT" Ordering="2" Options="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_MAINT" Ordering="3" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_PATCH AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="202" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="EnableRollback" Argument="False" Condition="AI_PATCH AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="203" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_PATCH AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="204" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="PatchWelcomeDlgDialogInitializer" Event="[AI_ButtonText_Next_Orig]" Argument="[ButtonText_Next]" Condition="AI_PATCH" Ordering="0" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="PatchWelcomeDlgDialogInitializer" Event="[ButtonText_Next]" Argument="[[AI_CommitButton]]" Condition="AI_PATCH" Ordering="1" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="PatchWelcomeDlgDialogInitializer" Event="[AI_Text_Next_Orig]" Argument="[Text_Next]" Condition="AI_PATCH" Ordering="2" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="PatchWelcomeDlgDialogInitializer" Event="[Text_Next]" Argument="[Text_Install]" Condition="AI_PATCH" Ordering="3" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Back" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_PATCH" Ordering="0" Options="2"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Back" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_PATCH" Ordering="1" Options="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_ApplyShortcutFlags" Type="3073" Source="ShortcutFlags.dll" Target="UpdateShortcutFlags" WithoutSeq="true"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ChooseTextStyles" Type="1" Source="aicustact.dll" Target="ChooseTextStyles"/>
     <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
     <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DoRemoveExternalUIStub" Type="3585" Source="ExternalUICleaner.dll" Target="DoRemoveExternalUIStub" WithoutSeq="true"/>
     <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
     <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
     <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
@@ -156,6 +365,7 @@
     <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
     <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
     <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
     <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
     <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
     <ROW Action="AI_PinShortcuts" Type="1" Source="ShortcutFlags.dll" Target="PinShortcuts"/>
@@ -164,7 +374,9 @@
     <ROW Action="AI_PrepareShortcutFlags" Type="1" Source="ShortcutFlags.dll" Target="PrepareActionData"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
     <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_RemoveExternalUIStub" Type="1" Source="ExternalUICleaner.dll" Target="RemoveExternalUIStub"/>
     <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_RunFinishActions" Type="1" Source="aicustact.dll" Target="RunFinishActions" WithoutSeq="true"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
     <ROW Action="AI_UnpinFromStartScreen" Type="1025" Source="ShortcutFlags.dll" Target="UnpinFromStartScreen" WithoutSeq="true"/>
@@ -173,6 +385,9 @@
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[D]\"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDialogComponent">
+    <ROW Dialog="PrepareDlg" HCentering="50" VCentering="50" Width="360" Height="120" Attributes="0" Title="[ProductName] [Setup]" Control_Default="Cancel" Control_Cancel="Cancel" TitleLocId="Dialog.PrepareDlg" MsiKey="PrepareDlg"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiEnvComponent">
     <ROW Environment="SPLM_LICENSE_SERVER" Name="=-*SPLM_LICENSE_SERVER" Value="27800@127.0.0.1" Component_="Lmgrd"/>
@@ -184,10 +399,15 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
-    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
     <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
     <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_PrepareShortcutFlags" Condition="(VersionNT &gt; 501) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="4501"/>
+    <ROW Action="AI_PinShortcuts" Condition="(VersionNT &gt; 600) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="6499"/>
+    <ROW Action="AI_UnpinShortcuts" Condition="(VersionNT &gt; 600) AND (REMOVE = &quot;ALL&quot;)" Sequence="3199"/>
+    <ROW Action="AI_GetArpIconPath" Sequence="1401"/>
+    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
     <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
@@ -200,17 +420,17 @@
     <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
     <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
     <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
-    <ROW Action="AI_PrepareShortcutFlags" Condition="(VersionNT &gt; 501) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="4501"/>
-    <ROW Action="AI_PinShortcuts" Condition="(VersionNT &gt; 600) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="6499"/>
-    <ROW Action="AI_UnpinShortcuts" Condition="(VersionNT &gt; 600) AND (REMOVE = &quot;ALL&quot;)" Sequence="3199"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="InstallDlg" Condition="AI_INSTALL" Sequence="1230" SeqType="3" MsiKey="WelcomeDlg"/>
+    <ROW Action="MaintenanceTypeDlg" Condition="AI_MAINT" Sequence="1250" SeqType="3" MsiKey="MaintenanceTypeDlg"/>
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
     <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
     <ROW Action="AI_DpiContentScale" Sequence="52"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
+    <ROW Action="AI_ChooseTextStyles" Sequence="74"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
     <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] 无法安装在 [WindowsTypeNT40Display]。" DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
@@ -229,15 +449,34 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
     <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
     <ROW Registry="D" Root="-1" Key="Software\[Manufacturer]\[UpgradeCode]" Name="D" Value="[D]" Component_="D"/>
+    <ROW Registry="DisplayIcon" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayIcon" Value="[ARP_ICON_PATH]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayName" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayName" Value="[AI_PRODUCTNAME_ARP]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayVersion" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayVersion" Value="[ProductVersion]" Component_="AI_CustomARPName"/>
+    <ROW Registry="EstimatedSize" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="EstimatedSize" Value="#[AI_ARP_SIZE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="[ARPHELPLINK]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
     <ROW Registry="LMGRD_LOG_FILE" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="LMGRD_LOG_FILE" Value="D:\Program Files (x86)\NX License Servers\splm_ugslmd.log" Component_="LMGRD_LOG_FILE"/>
     <ROW Registry="License" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="License" Value="D:\Program Files (x86)\NX License Servers\splm9.lic" Component_="License"/>
     <ROW Registry="Lmgrd" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="Lmgrd" Value="D:\Program Files (x86)\NX License Servers\lmgrd.exe" Component_="Lmgrd"/>
+    <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /i [ProductCode] AI_UNINSTALLER_CTP=1" Component_="AI_CustomARPName"/>
+    <ROW Registry="NoRepair" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoRepair" Value="#1" Component_="AI_CustomARPName"/>
     <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Readme" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Readme" Value="[ARPREADME]" Component_="AI_CustomARPName"/>
     <ROW Registry="SPLM_LICENSE_SERVER" Root="2" Key="SYSTEM\ControlSet001\Control\Session Manager\Environment" Name="SPLM_LICENSE_SERVER" Value="27800@127.0.0.1" Component_="SPLM_LICENSE_SERVER"/>
     <ROW Registry="Service" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="Service" Value="Siemens PLM License Server" Component_="Service"/>
     <ROW Registry="TSAccess" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="TSAccess" Value="#0" Component_="TSAccess"/>
+    <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Value="[ARPURLUPDATEINFO]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallPath" Value="[AI_UNINSTALLER] /x [ProductCode] AI_UNINSTALLER_CTP=1" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode] AI_UNINSTALLER_CTP=1" Component_="AI_CustomARPName"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+    <ROW Registry="VersionMajor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMajor" Value="#2" Component_="AI_CustomARPName"/>
+    <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#2" Component_="AI_CustomARPName"/>
     <ROW Registry="cmdlineparams" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="cmdlineparams" Component_="cmdlineparams"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiServCtrlComponent">
@@ -249,8 +488,11 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="NXLicenseServers" Directory_="NXLicenseServers_Dir" Name="卸载NXLI~1|卸载NX License Servers" Component_="install.log" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1" CustomFlags="1"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiTextStyleComponent">
+    <ROW TextStyle="Manufacturer_Manufacturer" FaceName="Verdana" Size="10" Color="16777215" StyleBits="0"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
-    <ATTRIBUTE name="UsedTheme" value="classic"/>
+    <ATTRIBUTE name="UsedTheme" value="surface"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
