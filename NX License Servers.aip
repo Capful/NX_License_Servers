@@ -45,7 +45,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="AI_CustomARPName" ComponentId="{CADBB748-3BBB-4DBC-B601-63B44F903B28}" Directory_="APPDIR" Attributes="260" KeyPath="DisplayName" Options="1"/>
-    <ROW Component="AI_ExePath" ComponentId="{7BC263A6-98A9-4B92-A612-B10EECE13ED4}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
+    <ROW Component="AI_ExePath" ComponentId="{01998BFF-8930-4B0C-9022-A98BEDE44953}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
     <ROW Component="D" ComponentId="{8DD09162-164B-46D1-BE11-005EFAD9E6F4}" Directory_="APPDIR" Attributes="260" KeyPath="D" Options="1"/>
     <ROW Component="LMGRD_LOG_FILE" ComponentId="{B6DB19C7-69FC-4135-8502-DA64BB8513DC}" Directory_="APPDIR" Attributes="260" KeyPath="LMGRD_LOG_FILE"/>
     <ROW Component="License" ComponentId="{D57F7FC4-4A22-46D8-9863-32A6DB8DE4DE}" Directory_="APPDIR" Attributes="260" KeyPath="License"/>
@@ -176,7 +176,7 @@
     <ROW Dialog_="DiskCostDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="ProductNameForSplash_ProductNameFor" Order="900"/>
     <ROW Dialog_="DiskCostDlg" Control="Text_2" Type="Text" X="273" Y="66" Width="53" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1000"/>
     <ROW Dialog_="ExitDialog" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="500" MsiKey="ExitDialog#Bitmap"/>
-    <ROW Dialog_="ExitDialog" Control="Description" Type="Text" X="17" Y="105" Width="310" Height="31" Attributes="196611" Text="[ProductName] v [ProductVersion] 已成功[Finish1]。" Order="700" MsiKey="ExitDialog#Description"/>
+    <ROW Dialog_="ExitDialog" Control="Description" Type="Text" X="17" Y="105" Width="310" Height="31" Attributes="196611" Text="[ProductName] 已成功[Finish1]。" Order="700" MsiKey="ExitDialog#Description"/>
     <ROW Dialog_="ExitDialog" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="800" MsiKey="ExitDialog#ProductLogo"/>
     <ROW Dialog_="ExitDialog" Control="ReadmeButton" Type="ImageButton" X="77" Y="155" Width="92" Height="123" Attributes="3" Text="[ViewReadMeButton]" Order="900" MsiKey="ExitDialog#ReadmeButton" ExtType="ImageButton"/>
     <ROW Dialog_="ExitDialog" Control="MetroReadmeText" Type="Text" X="83" Y="278" Width="86" Height="16" Attributes="196611" Text="README" Order="1000" TextLocId="Metro.Control.Text.ExitDialog#Readme" MsiKey="ExitDialog#MetroReadmeText"/>
@@ -262,6 +262,7 @@
     <ROW Dialog_="OutOfRbDiskDlg" Control="Text_2" Type="Text" X="273" Y="66" Width="53" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
     <ROW Dialog_="PatchWelcomeDlg" Control="PatchWelcomeDlgDialogInitializer" Type="DialogInitializer" X="0" Y="0" Width="0" Height="0" Attributes="0" Order="-1" TextLocId="-" HelpLocId="-" ExtDataLocId="-"/>
     <ROW Dialog_="PatchWelcomeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="100" MsiKey="PatchWelcomeDlg#Bitmap"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="Description" Type="Text" X="17" Y="151" Width="312" Height="50" Attributes="196611" Text="[Wizard]准备安装 [ProductName] 要安装补丁。点击&quot;[Text_Next]&quot; 继续或关闭[Wizard]窗口。" TextStyle="DefaultTextBlack" Order="500" TextLocId="Control.Text.PatchWelcomeDlg#DescriptionNoClose" MsiKey="PatchWelcomeDlg#Description"/>
     <ROW Dialog_="PatchWelcomeDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="600" MsiKey="PatchWelcomeDlg#ProductLogo"/>
     <ROW Dialog_="PatchWelcomeDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="ProductNameForSplash_ProductNameFor" Order="700"/>
     <ROW Dialog_="PatchWelcomeDlg" Control="CompanyText" Type="Text" X="154" Y="21" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="800" TextLocId="Metro.Control.Text.Manufacturer"/>
@@ -311,8 +312,8 @@
     <ROW Dialog_="VerifyRemoveDlg" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="100" MsiKey="VerifyRemoveDlg#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
     <ROW Dialog_="VerifyRemoveDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="200" MsiKey="VerifyRemoveDlg#Bitmap"/>
     <ROW Dialog_="VerifyRemoveDlg" Control="Back" Type="ImageButton" X="251" Y="359" Width="78" Height="28" Attributes="3" Text="[metrobuttonimage]" TextStyle="[MetroButtonText]" Order="300" MsiKey="VerifyRemoveDlg#Back" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Back]" ExtDataLocId="-"/>
-    <ROW Dialog_="VerifyRemoveDlg" Control="SubTitle" Type="Text" X="17" Y="105" Width="317" Height="19" Attributes="196611" Text="开始删除 [ProductName] v [ProductVersion]" TextStyle="[SubTitleStyle]" Order="400" MsiKey="VerifyRemoveDlg#SubTitle"/>
-    <ROW Dialog_="VerifyRemoveDlg" Control="Text" Type="Text" X="17" Y="139" Width="308" Height="63" Attributes="196611" Text="点击&quot;删除&quot; [ProductName] v [ProductVersion] 从计算机中删除。 要更改安装设置请点击 &quot;上一步(&amp;B)&quot; 。" Order="500" MsiKey="VerifyRemoveDlg#Text"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="SubTitle" Type="Text" X="17" Y="105" Width="317" Height="19" Attributes="196611" Text="开始删除 [ProductName]" TextStyle="[SubTitleStyle]" Order="400" MsiKey="VerifyRemoveDlg#SubTitle"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="Text" Type="Text" X="17" Y="139" Width="308" Height="63" Attributes="196611" Text="点击&quot;删除&quot; [ProductName] 从计算机中删除。 要更改安装设置请点击 &quot;上一步(&amp;B)&quot; 。" Order="500" MsiKey="VerifyRemoveDlg#Text"/>
     <ROW Dialog_="VerifyRemoveDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="700" MsiKey="VerifyRemoveDlg#ProductLogo"/>
     <ROW Dialog_="VerifyRemoveDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="800" MsiKey="VerifyRemoveDlg#AdvInst"/>
     <ROW Dialog_="VerifyRemoveDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="ProductNameForSplash_ProductNameFor" Order="900"/>
@@ -322,8 +323,8 @@
     <ROW Dialog_="VerifyRepairDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="100" MsiKey="VerifyRepairDlg#Bitmap"/>
     <ROW Dialog_="VerifyRepairDlg" Control="Repair" Type="ImageButton" X="251" Y="359" Width="78" Height="28" Attributes="3" Text="[metrobuttonimage]" TextStyle="[MetroButtonText]" Order="200" MsiKey="VerifyRepairDlg#Repair" Options="1" ExtType="ImageButton" ExtData="修复(&amp;P)" ExtDataLocId="Metro.Control.ExtData.VerifyRepairDlg#Repair"/>
     <ROW Dialog_="VerifyRepairDlg" Control="Back" Type="ImageButton" X="251" Y="359" Width="78" Height="28" Attributes="3" Text="[metrobuttonimage]" TextStyle="[MetroButtonText]" Order="400" MsiKey="VerifyRepairDlg#Back" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Back]" ExtDataLocId="-"/>
-    <ROW Dialog_="VerifyRepairDlg" Control="SubTitle" Type="Text" X="17" Y="105" Width="302" Height="19" Attributes="196611" Text="开始修复 [ProductName] v [ProductVersion]" TextStyle="[SubTitleStyle]" Order="500" MsiKey="VerifyRepairDlg#SubTitle"/>
-    <ROW Dialog_="VerifyRepairDlg" Control="Text" Type="Text" X="17" Y="139" Width="308" Height="57" Attributes="196611" Text="点击&quot;修复&quot;  [ProductName] v [ProductVersion] 修复安装。 要更改安装设置请点击 &quot;上一步(&amp;B)&quot; 。" Order="600" MsiKey="VerifyRepairDlg#Text"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="SubTitle" Type="Text" X="17" Y="105" Width="302" Height="19" Attributes="196611" Text="开始修复 [ProductName]" TextStyle="[SubTitleStyle]" Order="500" MsiKey="VerifyRepairDlg#SubTitle"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="Text" Type="Text" X="17" Y="139" Width="308" Height="57" Attributes="196611" Text="点击&quot;修复&quot;  [ProductName] 修复安装。 要更改安装设置请点击 &quot;上一步(&amp;B)&quot; 。" Order="600" MsiKey="VerifyRepairDlg#Text"/>
     <ROW Dialog_="VerifyRepairDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="700" MsiKey="VerifyRepairDlg#ProductLogo"/>
     <ROW Dialog_="VerifyRepairDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="800" MsiKey="VerifyRepairDlg#AdvInst"/>
     <ROW Dialog_="VerifyRepairDlg" Control="ProductNameTitle" Type="Text" X="104" Y="29" Width="218" Height="39" Attributes="196611" Text="License Servers" TextStyle="ProductNameForSplash_ProductNameFor" Order="900"/>
