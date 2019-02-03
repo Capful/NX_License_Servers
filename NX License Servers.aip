@@ -44,7 +44,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="AI_CustomARPName" ComponentId="{D7975732-0F9C-43C8-B052-32BC18AE55BC}" Directory_="APPDIR" Attributes="260" KeyPath="DisplayName" Options="1"/>
-    <ROW Component="AI_ExePath" ComponentId="{48A4472E-8B58-4D8B-8028-07EFB8397062}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
+    <ROW Component="AI_ExePath" ComponentId="{E69EA7F5-CD0B-4476-BE20-57C8F8CA3A4B}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
     <ROW Component="LMGRD_LOG_FILE" ComponentId="{A676F9AB-3FA8-4F93-B76B-C91192C8C09C}" Directory_="APPDIR" Attributes="260" KeyPath="LMGRD_LOG_FILE"/>
     <ROW Component="License" ComponentId="{F924D3E9-4714-4EAA-B2DF-BF8447D7B66C}" Directory_="APPDIR" Attributes="260" KeyPath="License"/>
     <ROW Component="Lmgrd" ComponentId="{FEEF0993-3614-46D9-ADD0-D3B31A8CB5CB}" Directory_="APPDIR" Attributes="260" KeyPath="Lmgrd"/>
@@ -189,7 +189,7 @@
     <ROW Dialog_="FilesInUse" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="ProductNameForSplash_ProductNameFor" Order="1200"/>
     <ROW Dialog_="FilesInUse" Control="Text_2" Type="Text" X="273" Y="66" Width="53" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1300"/>
     <ROW Dialog_="InstallDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="100" MsiKey="InstallDlg#Bitmap"/>
-    <ROW Dialog_="InstallDlg" Control="YouMustAgreeCtrl" Type="Hyperlink" X="27" Y="233" Width="50" Height="18" Attributes="196611" Text="&lt;a href=&quot;&quot;&gt;更新日志&lt;/a&gt;" TextStyle="[HyperlinkFont]" Order="500" MsiKey="InstallDlg#YouMustAgreeCtrl"/>
+    <ROW Dialog_="InstallDlg" Control="YouMustAgreeCtrl" Type="Hyperlink" X="27" Y="238" Width="50" Height="18" Attributes="196611" Text="&lt;a href=&quot;&quot;&gt;更新日志&lt;/a&gt;" TextStyle="[HyperlinkFont]" Order="500" MsiKey="InstallDlg#YouMustAgreeCtrl"/>
     <ROW Dialog_="InstallDlg" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="196611" Text="Capful build" TextStyle="[BrandingStyle]" Order="600" MsiKey="InstallDlg#AdvInst"/>
     <ROW Dialog_="InstallDlg" Control="InstallButton" Type="ImageButton" X="109" Y="326" Width="128" Height="41" Attributes="3" Text="[metroinstallbutton]" TextStyle="[MetroInstallButtonFont]" Order="700" MsiKey="InstallDlg#InstallButton" ExtType="ImageButton" ExtData="安装" ExtDataLocId="Metro.Control.ExtData.VerifyReadyDlg#InstallButton"/>
     <ROW Dialog_="InstallDlg" Control="ProductLogo" Type="Bitmap" X="27" Y="5" Width="59" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="800"/>
@@ -197,12 +197,13 @@
     <ROW Dialog_="InstallDlg" Control="CompanyText" Type="Text" X="154" Y="21" Width="38" Height="12" Attributes="196611" Text="[Manufacturer]" TextStyle="Manufacturer_Manufacturer" Order="1000" TextLocId="Metro.Control.Text.Manufacturer"/>
     <ROW Dialog_="InstallDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="ProductNameForSplash_ProductNameFor" Order="1100"/>
     <ROW Dialog_="InstallDlg" Control="Text_2" Type="Text" X="273" Y="66" Width="53" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
-    <ROW Dialog_="InstallDlg" Control="Text_5" Type="Text" X="27" Y="198" Width="299" Height="20" Attributes="196611" Text="......................................................................................................................................" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1300"/>
+    <ROW Dialog_="InstallDlg" Control="Text_5" Type="Text" X="27" Y="217" Width="299" Height="20" Attributes="196611" Text="......................................................................................................................................" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1300"/>
     <ROW Dialog_="InstallDlg" Control="Text_7" Type="Text" X="27" Y="125" Width="299" Height="20" Attributes="196611" Text="# 支持NX10 - NX1847 版本共存" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1400"/>
     <ROW Dialog_="InstallDlg" Control="Text_8" Type="Text" X="27" Y="182" Width="299" Height="20" Attributes="196611" Text="# 本许可证源文件资源来自于网络" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1500"/>
-    <ROW Dialog_="InstallDlg" Control="Text_9" Type="Text" X="27" Y="164" Width="299" Height="20" Attributes="196611" Text="# 安装前请关闭NX软件并卸载旧许可证" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1600"/>
+    <ROW Dialog_="InstallDlg" Control="Text_9" Type="Text" X="27" Y="163" Width="299" Height="20" Attributes="196611" Text="# 安装前请关闭NX软件并卸载旧许可证" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1600"/>
     <ROW Dialog_="InstallDlg" Control="Text_4" Type="Text" X="26" Y="104" Width="299" Height="20" Attributes="196611" Text="......................................................................................................................................" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1700"/>
     <ROW Dialog_="InstallDlg" Control="Text_6" Type="Text" X="27" Y="143" Width="299" Height="20" Attributes="196611" Text="# 一键安装，不需要任何多余的设置" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1800"/>
+    <ROW Dialog_="InstallDlg" Control="Text_3" Type="Text" X="28" Y="201" Width="299" Height="20" Attributes="196611" Text="# 感谢SolidSQUAD（SSQ）" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1900"/>
     <ROW Dialog_="LicenseAgreementDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="100" MsiKey="LicenseAgreementDlg#Bitmap"/>
     <ROW Dialog_="LicenseAgreementDlg" Control="AgreeInstall" Type="ImageButton" X="219" Y="359" Width="110" Height="28" Attributes="3" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="300" MsiKey="LicenseAgreementDlg#AgreeInstall" ExtType="ImageButton" ExtData="安装(&amp;A)"/>
     <ROW Dialog_="LicenseAgreementDlg" Control="AgreementText" Type="ScrollableText" X="17" Y="122" Width="312" Height="227" Attributes="3" Property="EulaRead" Text="changelog.rtf" Order="600" TextLocId="_2" MsiKey="LicenseAgreementDlg#AgreementText"/>
@@ -414,8 +415,10 @@
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
     <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
     <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
-    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_GetArpIconPath" Sequence="1401"/>
+    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
     <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
@@ -428,8 +431,6 @@
     <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
     <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
     <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
-    <ROW Action="AI_GetArpIconPath" Sequence="1401"/>
-    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="InstallDlg" Condition="AI_INSTALL" Sequence="1230" SeqType="3" MsiKey="WelcomeDlg"/>
