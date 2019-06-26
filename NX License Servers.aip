@@ -22,10 +22,10 @@
     <ROW Property="ARPPRODUCTICON" Value="logo.exe" Type="8"/>
     <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
     <ROW Property="Manufacturer" Value="Capful"/>
-    <ROW Property="ProductCode" Value="2052:{86D9A9DF-6F84-4A7B-B1A8-1F0C17D2D956} " Type="16"/>
+    <ROW Property="ProductCode" Value="2052:{2C4DC942-4214-40FF-A1FB-476E11FE24D1} " Type="16"/>
     <ROW Property="ProductLanguage" Value="2052"/>
     <ROW Property="ProductName" Value="NX License Servers"/>
-    <ROW Property="ProductVersion" Value="2.2.1902" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.3.1906" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{0135B754-48C3-4871-97A3-EE6BFAE8979D}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -43,7 +43,7 @@
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AI_CustomARPName" ComponentId="{D7975732-0F9C-43C8-B052-32BC18AE55BC}" Directory_="APPDIR" Attributes="260" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_CustomARPName" ComponentId="{F2DD8A42-35E0-475B-80E8-02A71AD3986C}" Directory_="APPDIR" Attributes="260" KeyPath="DisplayName" Options="1"/>
     <ROW Component="AI_ExePath" ComponentId="{4C8AA845-1121-41F0-BDA5-2168BE9C18A6}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
     <ROW Component="LMGRD_LOG_FILE" ComponentId="{A676F9AB-3FA8-4F93-B76B-C91192C8C09C}" Directory_="APPDIR" Attributes="260" KeyPath="LMGRD_LOG_FILE"/>
     <ROW Component="License" ComponentId="{F924D3E9-4714-4EAA-B2DF-BF8447D7B66C}" Directory_="APPDIR" Attributes="260" KeyPath="License"/>
@@ -72,10 +72,10 @@
     <ROW File="installs.exe" Component_="installs.exe" FileName="installs.exe" Attributes="0" SourcePath="NX License Servers\installs.exe" SelfReg="false" NextFile="lmgrd.exe" DigSign="true"/>
     <ROW File="lmgrd.exe" Component_="lmgrd.exe" FileName="lmgrd.exe" Attributes="0" SourcePath="NX License Servers\lmgrd.exe" SelfReg="false" NextFile="lmtools.exe" DigSign="true"/>
     <ROW File="lmtools.exe" Component_="lmtools.exe" FileName="lmtools.exe" Attributes="0" SourcePath="NX License Servers\lmtools.exe" SelfReg="false" NextFile="lmutil.exe" DigSign="true"/>
-    <ROW File="lmutil.exe" Component_="lmutil.exe" FileName="lmutil.exe" Attributes="0" SourcePath="NX License Servers\lmutil.exe" SelfReg="false" NextFile="splm9.lic" DigSign="true"/>
-    <ROW File="splm9.lic" Component_="install.log" FileName="splm9.lic" Attributes="0" SourcePath="NX License Servers\splm9.lic" SelfReg="false" NextFile="splm_ugslmd.log"/>
+    <ROW File="lmutil.exe" Component_="lmutil.exe" FileName="lmutil.exe" Attributes="0" SourcePath="NX License Servers\lmutil.exe" SelfReg="false" NextFile="splm_ugslmd.log" DigSign="true"/>
+    <ROW File="splm10.lic" Component_="install.log" FileName="splm10.lic" Attributes="0" SourcePath="NX License Servers\splm10.lic" SelfReg="false"/>
     <ROW File="splm_ugslmd.log" Component_="install.log" FileName="SPLM_U~1.LOG|splm_ugslmd.log" Attributes="0" SourcePath="NX License Servers\splm_ugslmd.log" SelfReg="false" NextFile="ugslmd.exe"/>
-    <ROW File="ugslmd.exe" Component_="ugslmd.exe" FileName="ugslmd.exe" Attributes="0" SourcePath="NX License Servers\ugslmd.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="ugslmd.exe" Component_="ugslmd.exe" FileName="ugslmd.exe" Attributes="0" SourcePath="NX License Servers\ugslmd.exe" SelfReg="false" NextFile="splm10.lic" DigSign="true"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -199,7 +199,7 @@
     <ROW Dialog_="InstallDlg" Control="Text_1" Type="Text" X="104" Y="0" Width="50" Height="36" Attributes="196611" Text="NX" TextStyle="ProductNameForSplash_ProductNameFor" Order="1100"/>
     <ROW Dialog_="InstallDlg" Control="Text_2" Type="Text" X="273" Y="66" Width="53" Height="12" Attributes="196611" Text="[ProductVersion]" TextStyle="Manufacturer_Manufacturer" Order="1200"/>
     <ROW Dialog_="InstallDlg" Control="Text_5" Type="Text" X="24" Y="217" Width="299" Height="20" Attributes="196611" Text="......................................................................................................................................" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1300"/>
-    <ROW Dialog_="InstallDlg" Control="Text_7" Type="Text" X="24" Y="125" Width="299" Height="20" Attributes="196611" Text="# 支持NX6.0 - NX1847 版本共存" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1400"/>
+    <ROW Dialog_="InstallDlg" Control="Text_7" Type="Text" X="24" Y="125" Width="299" Height="20" Attributes="196611" Text="# 支持NX6.0 - NX1872 版本共存" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1400"/>
     <ROW Dialog_="InstallDlg" Control="Text_8" Type="Text" X="24" Y="183" Width="299" Height="20" Attributes="196611" Text="# 本许可证源文件资源来自于网络" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1500"/>
     <ROW Dialog_="InstallDlg" Control="Text_9" Type="Text" X="24" Y="163" Width="299" Height="20" Attributes="196611" Text="# 安装前请关闭NX软件并卸载旧许可证" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1600"/>
     <ROW Dialog_="InstallDlg" Control="Text_4" Type="Text" X="24" Y="104" Width="299" Height="20" Attributes="196611" Text="......................................................................................................................................" TextStyle="DefaultTextBlack_DefaultTextBlack" Order="1700"/>
@@ -467,7 +467,7 @@
     <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
     <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
     <ROW Registry="LMGRD_LOG_FILE" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="LMGRD_LOG_FILE" Value="D:\Program Files (x86)\NX License Servers\splm_ugslmd.log" Component_="LMGRD_LOG_FILE"/>
-    <ROW Registry="License" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="License" Value="D:\Program Files (x86)\NX License Servers\splm9.lic" Component_="License"/>
+    <ROW Registry="License" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="License" Value="D:\Program Files (x86)\NX License Servers\splm10.lic" Component_="License"/>
     <ROW Registry="Lmgrd" Root="2" Key="Software\FLEXlm License Manager\Siemens PLM License Server" Name="Lmgrd" Value="D:\Program Files (x86)\NX License Servers\lmgrd.exe" Component_="Lmgrd"/>
     <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /i [ProductCode] AI_UNINSTALLER_CTP=1" Component_="AI_CustomARPName"/>
     <ROW Registry="NoRepair" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoRepair" Value="#1" Component_="AI_CustomARPName"/>
